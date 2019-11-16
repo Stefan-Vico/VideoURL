@@ -1,0 +1,27 @@
+<div class="ud-form-container">
+  <div class="inner-container">
+    <div class="title"> <h1>User Details</h1> </div>
+    <mat-card>
+      <form [formGroup]="udForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Client Username" formControlName="clientUsername" />
+        </mat-form-field>
+        <div *ngIf="submitted && f.clientUsername.errors" class="invalid-feedback">
+          <div *ngIf="f.clientUsername.errors.required">Client Username is required</div>
+        </div>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Operator Username" formControlName="operatorUsernam" />
+        </mat-form-field>
+        <div *ngIf="submitted && f.operatorUsernam.errors" class="invalid-feedback">
+          <div *ngIf="f.operatorUsernam.errors.required">Operator Username is required</div>
+        </div>
+        <div class="buttons">
+            <button>Next Step</button>
+        </div>
+        <p>Please provide client and operator usernames.</p>
+      </form>
+      <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+    </mat-card>
+    
+  </div>
+</div>

@@ -1,0 +1,167 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: #f8f9fc;
+  margin-top: -21px;
+}
+
+.container {
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  max-width: 1240px;
+  padding: 0px 50px;
+  margin: 0px auto;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.container .mat-form-field {
+  margin-bottom: 12px;
+  display: block;
+}
+
+.container .mat-card {
+  max-width: 550px;
+  margin: 0px auto;
+}
+.container .mat-card p{
+  text-align: center;
+}
+form {
+  padding: 30px 30px;
+}
+.buttons {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.buttons button,
+.copy-button {
+  text-align: center;
+  display: block;
+  width: 100%;
+  border: none;
+  background: #3f53d9;
+  color: #fff;
+  cursor: pointer;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 4px;
+  -webkit-transition: background 0.25s;
+  transition: background 0.25s;
+  font-size: 18px;
+  padding: 12px;
+}
+.buttons button:hover,
+.copy-button {
+  background-color: #293ecc;
+}
+.copy-button{
+  background-color: #434260;
+  border-radius: 0px 0px 4px 4px;
+}
+.copy-button:hover{
+  background-color: #58578a;
+}
+.invalid-feedback {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  margin-top: -10px;
+  color: red;
+}
+.title {
+  margin: 0px auto;
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+small {
+  margin: 0px auto;
+  display: block;
+  text-align: center;
+}
+.image-background {
+  background-image: url('./assets/img/undraw_video_call_kxyp.svg');
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  background-position: center;
+}
+.url-generator .generator-card{
+  background-color: transparent;
+  box-shadow: none;
+}
+.generator {
+  max-width: 250px;
+  margin-top: 50px;
+  margin: 0px auto;
+  margin-top: 45px;
+  text-align: center;
+}
+.generator a{
+  font-size: 18px;
+  color: #3f53d9;
+  margin: 30px 0px;
+  font-weight: 500;
+  display: block;
+  cursor: pointer;
+}
+.generator button {
+  margin-top: 10px;
+}
+.mat-form-field-type-mat-native-select.mat-form-field-disabled
+  .mat-form-field-infix::after,
+.mat-input-element:disabled {
+  color: rgba(0, 0, 0, 0.88);
+}
+.links .mat-form-field-appearance-legacy .mat-form-field-label {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 17px;
+}
+.single-link {
+  padding: 15px;
+  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox; /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Chrome */
+  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  flex-direction: column;
+  justify-content: center;
+}
+.container .url-generator .single-link .mat-card {
+  max-width: 100%;  
+  margin: 0;
+  border-radius: 4px 4px 0px 0px;
+}
+.container .url-generator .mat-card {
+  max-width: 800px;
+  margin: 0px auto;
+  min-width: 70%;
+}
+.url-generator  .mat-progress-bar {
+  display: block;
+  height: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: opacity 250ms linear;
+  width: 100%;
+  margin-top: 15px;
+}
+p{
+  font-size: 16px;
+  color: rgb(0,0,0,0.64);
+}

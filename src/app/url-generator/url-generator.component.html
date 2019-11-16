@@ -1,0 +1,63 @@
+<section class="url-generator">
+  <div class="title">
+      <h1>Welcome to video chat APP</h1>
+      <p>
+        Start by generating URL for video chat. After you generate your unique url<br>
+        share it with another person and start your chat.
+      </p>
+  </div>
+  <mat-card class="generator-card">
+  <div class="image-background"></div>
+  <div class="links">
+    <div *ngIf="operatorUrl" class="single-link">
+      <mat-card>
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Operator URL"
+            disabled
+            value="{{ operatorUrl }}"
+          />
+        </mat-form-field>
+      </mat-card>
+      <button
+        class="copy-button"
+        (click)="copyUrl(operatorUrl)"
+      >
+        Copy operator URL
+      </button>
+    </div>
+    <div *ngIf="customerUrl" class="single-link">
+      <mat-card>
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Customer URL"
+            disabled
+            value="{{ customerUrl }}"
+          />
+        </mat-form-field>
+      </mat-card>
+      <button
+        class="copy-button"
+        (click)="copyUrl(customerUrl)"
+      >
+        Copy customer URL
+      </button>
+    </div>
+  </div>
+  <div class="buttons generator">
+    <button class="btn btn-primary btn-custom" (click)="generateUrls()">
+      Get Video Chat URL
+    </button>
+    <a (click)="logoutThisUser()">
+      Logout
+    </a>
+  </div>
+  <mat-progress-bar mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+
+  <div class="error-message" ng-if="error">
+    {{ error }}
+  </div>
+</mat-card>
+</section>
